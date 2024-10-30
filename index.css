@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+}
+
+.Library {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px;
+  justify-content: start;
+  background-color: #c5beb4;
+  font-weight: 700;
+}
+.Library h1 {
+  color: white;
+  font-size: 40px;
+  font-family: "Courier New", Courier, monospace;
+  padding: 15px;
+  text-decoration: underline #c5beb4;
+  background-color: rgba(51, 51, 51, 0.781);
+  border-radius: 5px;
+}
+.Library h1 span {
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+}
+
+.book-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: fit-content;
+  margin-top: 10px;
+  background-color: #565449;
+  padding: 15px;
+  border-radius: 5px;
+  gap: 15px;
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #afa797;
+  max-width: 350px;
+  min-width: 200px;
+  height: fit-content;
+}
+
+.book h2 {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 10px;
+  border-bottom: #565449 solid 2px;
+  background-color: #c5beb4;
+}
+
+.book p {
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-left: 7px;
+}
+
+.botones {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-self: center;
+  gap: 5px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.botones button {
+  border-style: none;
+  width: fit-content;
+  color: white;
+  font-weight: 700;
+  padding: 4px;
+  border-radius: 5px;
+  background-color: #565449;
+  transition: all 0.1s ease;
+  cursor: pointer;
+}
+
+.botones button:hover {
+  transform: scale(1.05);
+}
+
+.add-book {
+  margin-top: 10px;
+  width: 120px;
+  background-color: #afa797;
+  border-style: none;
+  font-weight: 700;
+  font-size: 20px;
+  color: #11120d;
+  font-family: "Courier New", Courier, monospace;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.add-book:hover {
+  transform: scale(1.05);
+}
+
+#dialog {
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  height: 350px;
+  background-color: rgb(51, 51, 51);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dialog form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+}
+
+#dialog input {
+  height: 25px;
+  border-radius: 5px;
+  border-style: none;
+  padding: 10px;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#dialog input:focus {
+  outline: none;
+}
+
+#dialog label {
+  margin-top: 7px;
+}
+
+#dialog button {
+  margin-top: 10px;
+  border-style: none;
+  width: 100px;
+  cursor: pointer;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  color: black;
+  align-self: center;
+}
+
+#dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(5px);
+}
+
+.hidden {
+  display: none !important;
+}
